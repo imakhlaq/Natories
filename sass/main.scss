@@ -8,6 +8,8 @@
 @import "base/utilities";
 
 @import "components/button";
+
+@import "layout/grid";
 @import "layout/header";
 
 @import "pages/home";
@@ -25,36 +27,3 @@ Dark green: #28b485
 
 /* ===========`spcacing system===============
  2 4 8 12 16 24 32 48 64 80 96 128 */
-.heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-
-  /* to fix shaking in animation*/
-  backface-visibility: hidden;
-
-  &--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation: moveinleft 1s;
-  }
-  &--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.7rem;
-
-    animation-name: moveinright;
-    animation-duration: 1s;
-
-    /*  
-     animation-delay: 2s;
-     animation-iteration-count: 3;
-     animation-timing-function: ease-in ;
-   
-   
-     */
-  }
-}
