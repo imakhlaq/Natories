@@ -6,33 +6,128 @@
   perspective: 150rem;
   // to make perspective in mozerela firefox
   -moz-perspective: 150rem;
+  //to put cards on top of each other
   position: relative;
+  height: 52rem;
   &__side {
-    background-color: orangered;
-    height: 50rem;
-    width: 50rem;
+    height: 52rem;
+
     font-size: 2rem;
-    transition: all 0.8s;
-    // position: absolute;
+    transition: all 0.8s ease;
+
+    //to put cards on top of each other
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    // to hide back face
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-balck, 0.15);
 
     //for both side
     &--front {
-      background-color: orangered;
+      background-color: $color-white;
     }
     &--back {
-      background-color: green;
       transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondry-light,
+          $color-secondry-dark
+        );
+      }
     }
   }
 
-  &:hover &__side--front:hover {
+  &:hover &__side--front {
     //rotation of card
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
-  &:hover &__side--back:hover {
+  &:hover &__side--back {
     //rotation of card
     transform: rotateY(0);
+  }
+
+  //font side styling
+
+  &__picture {
+    //get inherited
+    background-size: cover;
+    height: 23rem;
+
+    //to blend img with linear gradiance
+    background-blend-mode: screen;
+
+    //to make it work in all browsers
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      //only one levl bcz this will compile stored in csss
+      background-image: url(../img/nat-5.jpg),
+        linear-gradient(
+          to right bottom,
+          rgba($color-secondry-light, 0.85),
+          rgba($color-secondry-dark, 0.85)
+        );
+    }
+    &--2 {
+      //only one levl bcz this will compile stored in csss
+      background-image: url(../img/nat-5.jpg);
+    }
+    &--3 {
+      //only one levl bcz this will compile stored in csss
+      background-image: url(../img/nat-5.jpg);
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+
+    //to make it work in googlecrome this will treat each line as seprate entity
+    -webkit-box-decoration-break: clone;
+    //to make each line a seprate so padding will apply equal ... same as above
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondry-light, 0.85),
+        rgba($color-secondry-dark, 0.85)
+      );
+    }
+  }
+  &__detail {
+    padding: 3rem;
+    &__list {
+      width: 80%;
+      margin: 0 auto;
+      &__items {
+        list-style: none;
+
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
   }
 }
