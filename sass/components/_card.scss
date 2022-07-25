@@ -81,6 +81,9 @@
 
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+    // beacause of clip path property  border radius broke in pictures
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     &--1 {
       //only one levl bcz this will compile stored in csss
       background-image: url(../img/nat-5.jpg),
@@ -118,7 +121,7 @@
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 75%;
+    width: 55%;
   }
 
   &__heading-span {
