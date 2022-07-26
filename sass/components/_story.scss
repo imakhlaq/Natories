@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-balck, $alpha: 0.1);
-  background-color: $color-white;
+  background-color: rgba($color-white, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -51,7 +51,7 @@
     transform: translate(-50%, -50%);
   }
   &:hover &__img {
-    transform: translateX(-4rem) scale(1);
+    transform: translateX(-4rem) scale(0.8);
     backface-visibility: hidden;
     filter: blur(3px) brightness(80%);
   }
