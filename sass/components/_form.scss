@@ -1,16 +1,36 @@
 .form {
-  &__group {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
   }
 
   &__input {
     font-size: 1.5rem;
     padding: 1.5rem 2rem;
+    color: inherit;
     border-radius: $radius-default;
     background-color: rgba($color-white, 0.5);
     border: none;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+
+    //when you click on input border appear
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($color-balck, 0.1);
+      border-bottom: 3px solid $color-primary-dark;
+    }
+    //to set invalid color to orange
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondry-dark;
+    }
+    //to style placeholder
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
   }
 
   &__label {
-    font-size: 1rem;
   }
 }
