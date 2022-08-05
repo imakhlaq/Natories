@@ -351,15 +351,29 @@ body {
   font-family: inherit;
   border-bottom: 3px solid transparent;
   width: 90%;
-  display: block; }
+  display: block;
+  transition: all .4s; }
   .form__input:focus {
     outline: none;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
     border-bottom: 3px solid #28b485; }
   .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
+
+.form__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .4s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
 
 .story {
   width: 75%;
@@ -371,7 +385,8 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg);
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -381,7 +396,7 @@ body {
     transform: translateX(-3rem) skewX(12deg); }
   .story__img {
     height: 100%;
-    transform: translateX(-4rem);
+    transform: translateX(-4rem) scale(1.2);
     backface-visibility: hidden;
     transition: all 0.5s; }
   .story__text {
@@ -402,7 +417,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .story:hover .story__img {
-    transform: translateX(-4rem) scale(0.8);
+    transform: translateX(-4rem) scale(1);
     backface-visibility: hidden;
     filter: blur(3px) brightness(80%); }
 

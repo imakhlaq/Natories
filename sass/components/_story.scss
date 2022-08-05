@@ -9,6 +9,7 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
   position: relative;
+  overflow: hidden;
 
   &__shape {
     width: 15rem;
@@ -26,9 +27,10 @@
   }
   &__img {
     height: 100%;
-    transform: translateX(-4rem);
+    transform: translateX(-4rem) scale(1.2);
     backface-visibility: hidden;
     transition: all 0.5s;
+    
   }
   &__text {
     transform: skewX(12deg);
@@ -51,7 +53,7 @@
     transform: translate(-50%, -50%);
   }
   &:hover &__img {
-    transform: translateX(-4rem) scale(0.8);
+    transform: translateX(-4rem) scale(1);
     backface-visibility: hidden;
     filter: blur(3px) brightness(80%);
   }
