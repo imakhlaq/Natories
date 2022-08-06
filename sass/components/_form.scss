@@ -14,7 +14,7 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
-    transition: all .4s;
+    transition: all 0.4s;
 
     //when you click on input border appear
     &:focus {
@@ -25,33 +25,31 @@
     //to set invalid color to orange
     &:focus:invalid {
       border-bottom: 3px solid $color-secondry-dark;
-      
     }
     //to style placeholder
     &::-webkit-input-placeholder {
       color: $color-grey-dark-2;
     }
-
-
   }
 
   &__label {
     font-size: 1.4rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     display: block;
-    transition: all .4s;
+    transition: all 0.4s;
   }
 
-//adjecent sibling selector(+)
-//genral sibling selector(~)
-  &__input:placeholder-shown + &__label{
+  //adjecent sibling selector(+)
+  //genral sibling selector(~)
+  &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
-
-
-
+  }
+  &__radio-group {
+    width: 50%;
+    display: inline-block;
   }
 }
