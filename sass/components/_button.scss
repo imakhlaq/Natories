@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -14,12 +15,18 @@
       animation-timing-function: ease-in;
       animation-fill-mode: backwards;
     }
+
+    //for button elemsts
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translatey(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-balck, 0.2);
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translatey(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-balck, 0.11);
   }
