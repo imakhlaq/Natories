@@ -513,57 +513,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.navigation__checkbox {
-  display: none; }
-
-.navigation__button {
-  background-color: #fff;
-  height: 7rem;
-  width: 7rem;
-  position: fixed;
-  top: 6rem;
-  right: 6rem;
-  border-radius: 50%;
-  z-index: 2000; }
-
-.navigation__background {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-  position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
-  background-image: radial-gradient(#55c57a, #28b485);
-  z-index: 1000;
-  transform: scale(95); }
-
-.navigation__nav {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1500; }
-
-.navigation__list {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  list-style: none;
-  text-align: center; }
-
-.navigation__item {
-  margin-bottom: 1rem; }
-
-.navigation__link {
-  font-size: 3rem;
-  font-weight: 300;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-image: linear-gradient(120deg, orangered 0%, orangered 50%, #fff 50%); }
-
 .footer {
   background-color: #333;
   padding: 10rem 0;
@@ -596,6 +545,68 @@ body {
     z-index: 1; }
   .footer__copyright {
     color: #f7f7f7; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
+.navigation__background {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transform: scale(95); }
+
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500; }
+
+.navigation__list {
+  position: absolute;
+  top: 41%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  list-style: none;
+  text-align: center;
+  transform: skewY(5deg); }
+
+.navigation__items {
+  margin-bottom: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, #28b485 0%, #28b485 50%, #fff 50%);
+  background-size: 200%;
+  transition: all 0.5s; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-size: 100%;
+  color: #28b485;
+  background-image: linear-gradient(120deg, black 0%, 50%, #fff 50%);
+  transform: translatex(1rem); }
 
 .section-about {
   background-color: #f7f7f7;
