@@ -6,6 +6,14 @@
   z-index: 100000;
   height: 100vh;
   width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s;
+  // when button is clicked it search for target id and target id is in popup element
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__content {
     background-color: $color-white;
@@ -17,7 +25,13 @@
     box-shadow: 0 2rem 4rem rgba($color-balck, 0.3);
     display: table;
     overflow: hidden;
+
+    transition: all 0.3s 0.2s;
+    //transition time and dealy
+
+    transform: translate(-50%, -50%) scale(0);
   }
+
   &__left {
     width: 33.33333%;
     display: table-cell;
@@ -42,5 +56,27 @@
     column-rule: 1px solid $color-grey-light-2;
     //when text broke to ne-xt line
     hyphens: auto;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 4rem;
+      position: absolute;
+      top: 3%;
+      left: 97%;
+      color: $color-grey-dark-3;
+      transition: all 0.5s;
+      line-height: 1;
+    }
+    &:hover,
+    &:active {
+      transform: scale(1.4);
+      color: $color-primary-dark;
+    }
+  }
+  &:target &__content {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
