@@ -27,7 +27,7 @@
     }
   }
 
-  @if $breakpoint==tap-port {
+  @if $breakpoint==tab-port {
     @media (max-width: 56.25em) {
       @content;
     }
@@ -38,7 +38,7 @@
     }
   }
   @if $breakpoint==big-desktop {
-    @media (max-width: 112em) {
+    @media (min-width: 112em) {
       @content;
     }
   }

@@ -41,7 +41,20 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*
+====min with from minimun width(that width that has been mension) to------------infinity
+====max with from maxinum width(that width that has been mension) to------------0;
+  */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -66,6 +79,10 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveinleft 1s; }
+    @media (max-width: 56.25em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        letter-spacing: 2rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -80,6 +97,10 @@ body {
      
      
        */ }
+    @media (max-width: 56.25em) {
+      .heading-primary--sub {
+        font-size: 1.2rem;
+        letter-spacing: 1rem; } }
 
 .heading-secondry {
   font-size: 3.5rem;
@@ -92,6 +113,12 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondry {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondry {
+      font-size: 2.5rem; } }
   .heading-secondry:hover {
     transform: skewY(2deg) skew(15deg) scale(1.1);
     text-shadow: 0.5 1rem 2rem rgba(0, 0, 0, 0.205); }
@@ -538,6 +565,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -547,6 +581,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -568,6 +609,10 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -586,21 +631,37 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 7rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 5rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
+    @media (max-width: 37.5em) {
+      .footer__logo {
+        width: 12rem; } }
   .footer__nav {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
   .footer__list {
     list-style: none; }
+    @media (max-width: 56.25em) {
+      .footer__list {
+        display: flex;
+        gap: 1.5rem; } }
   .footer__item {
     display: inline-block;
     margin-left: 1.5rem; }
+    @media (max-width: 56.25em) {
+      .footer__item {
+        margin-left: 0; } }
   .footer__link:link, .footer__link:visited {
     color: #f7f7f7;
     text-decoration: none;
@@ -630,6 +691,14 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   width: 6rem;
@@ -641,6 +710,14 @@ body {
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;

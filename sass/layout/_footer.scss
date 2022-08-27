@@ -2,13 +2,22 @@
   background-color: $color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
+  @include respond(tab-port) {
+    padding: 7rem 0;
+  }
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
   }
   &__logo {
     width: 15rem;
     height: auto;
+    @include respond(phone) {
+      width: 12rem;
+    }
   }
   &__nav {
     border-top: 1px solid $color-grey-dark;
@@ -18,10 +27,16 @@
 
   &__list {
     list-style: none;
+    @include respond(tab-port) {
+      display: flex;
+    }
   }
   &__item {
     display: inline-block;
     margin-left: 1.5rem;
+    @include respond(tab-port) {
+      margin-left: 0;
+    }
   }
   &__link {
     &:link,
@@ -42,7 +57,5 @@
   }
   &__copyright {
     color: $color-grey-light-1;
-    
-
   }
 }
