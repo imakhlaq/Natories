@@ -1,3 +1,10 @@
+/* 
+0 - 600px : phone
+600 -900 px : tab portrate
+900-1200px : tab landscape
+1200-1800 : normal styles
+(min)1800px+ big desktop
+*/
 @keyframes moveinleft {
   0% {
     opacity: 0;
