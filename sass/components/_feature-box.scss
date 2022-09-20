@@ -12,6 +12,9 @@
   //   justify-items: start;
   //   align-items: center;
   // }
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
 
   &__icon {
     font-size: 6rem;
@@ -27,6 +30,9 @@
     // @include respond(tab-port) {
     //   grid-row: span 2;
     // }
+    @include respond(tab-port) {
+     margin: 0;
+    }
   }
 
   &:hover {
