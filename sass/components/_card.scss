@@ -187,16 +187,13 @@
     color: $color-white;
   }
   &__price-only {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
   }
   &__price-value {
     font-size: 6rem;
     font-weight: 400;
   }
-
-
-
 
   @include respond(tab-port) {
     height: auto;
@@ -242,9 +239,6 @@
       width: 55%;
     }
 
-    
-    
-
     //back styling
     &__cta {
       position: relative;
@@ -261,7 +255,7 @@
       color: $color-white;
     }
     &__price-only {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       text-transform: uppercase;
     }
     &__price-value {
