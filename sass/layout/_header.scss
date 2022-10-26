@@ -22,6 +22,11 @@
   }
   &__logo {
     height: 3.5rem;
+    &:hover {
+      animation-name: logoAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
   }
   &__text-box {
     position: absolute;
